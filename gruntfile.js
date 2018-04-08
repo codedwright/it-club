@@ -21,7 +21,7 @@ module.exports = function(grunt) {
             options: {
 				stripBanners: false,
 				banner: '<%= banner %>',
-				separator: '\n\n\n\n\n\n'
+				separator: '\n'
 			},
 			lib: {
 				src: [
@@ -29,16 +29,12 @@ module.exports = function(grunt) {
 					'node_modules/angular-route/angular-route.min.js',
 					'node_modules/angular-animate/angular-animate.min.js',
 					'node_modules/angular-sanitize/angular-sanitize.js',
-					'node_modules/ngmap/build/scripts/ng-map.min.js',
-					'node_modules/textangular/dist/textAngular-rangy.min.js',
-					'node_modules/textangular/dist/textAngular-sanitize.min.js', 
-					'node_modules/textangular/dist/textAngular.min.js', 
+					'node_modules/ngmap/build/scripts/ng-map.min.js'
 				],
                 dest: 'scripts.js'
 			},
             dist: {
                 src: [
-					'js/video-sidebar.js',
 					'js/app.js',
 					'js/controllers/*.js',
 					'js/services/*.js',
@@ -79,33 +75,6 @@ module.exports = function(grunt) {
 					environment: 'development',
 					outputStyle: 'compressed'
 				}
-			}
-		},
-
-
-		'ftp-deploy': {
-			build: {
-				auth: {
-					host: 'ftp.codedwright.com',
-					port: 21,
-					authKey: 'key1'
-				},
-				src: './',
-				dest: '/public_html/',
-				exclusions: [
-					'**/.DS_Store',
-					'./.sass-cache',
-					'./css/partials',
-					'./css/font-awesome',
-					'./css/style.scss',
-					'./css/style.css.map',
-					'./js',
-					'./legacy',
-					'./node_modules',
-					'./.gitignore',
-					'./package-lock.json',
-					'./.git'
-				]
 			}
 		},
 
@@ -155,8 +124,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-uglify-es');
-	grunt.loadNpmTasks('grunt-ftp-deploy');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s).
