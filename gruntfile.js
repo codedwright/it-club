@@ -38,7 +38,8 @@ module.exports = function(grunt) {
 					'js/app.js',
 					'js/controllers/*.js',
 					'js/services/*.js',
-					'js/app.config.js'
+					'js/app.config.js',
+					'js/**.js'
 				],
                 dest: '<%= pkg.name %>.js'
             }
