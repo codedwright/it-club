@@ -1,6 +1,6 @@
 {
   "name": "it-club",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Public portal for Ivy Tech Community College Northeast's Information Technology Club",
   "main": "gruntfile.js",
   "scripts": {
