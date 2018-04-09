@@ -1,1 +1,1 @@
-var app = angular.module('itclub', ['ngRoute']);
+var app = angular.module('itclub', ['ngRoute', 'ngAnimate', 'ngSanitize', 'ngMap']);
