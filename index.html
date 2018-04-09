@@ -18,7 +18,7 @@
 	<link href="styles/icons.css" rel="stylesheet" type="text/css" />
 	<base href="/">
 	
-	<script src="./scripts.js"></script>
+	<script src="./scripts.min.js"></script>
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -38,13 +38,13 @@
 		<nav id="bt-menu" class="bt-menu">
 			<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Calendar</a></li>
-				<li><a href="#">Events</a></li>
-				<li><a href="#">News</a></li>
-				<li><a href="#">Photos</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a ng-href="/">Home</a></li>
+				<li><a ng-href="/about">About</a></li>
+				<li><a ng-href="/calendar">Calendar</a></li>
+				<li><a ng-href="/events">Events</a></li>
+				<li><a ng-href="/news">News</a></li>
+				<li><a ng-href="/photos">Photos</a></li>
+				<li><a ng-href="/contact">Contact</a></li>
 			</ul>
 			<ul>
 				<li><a href="http://www.twitter.com/" class="bt-icon icon-twitter">Twitter</a></li>
@@ -66,14 +66,10 @@
 	<!-- Footer -->
 
 
-	<div class="feature bg-light text-xs-center" id="googleMap"></div>
-
 	<!-- Footer -->
 	<footer class="text-xs-center hidden-sm-down">
 		<a class="btn btn-secondary-outline btn-lg" href="#top">&#8682;</a>
 	</footer>
-	<script src="./js/smooth.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script src="./it-club.min.js"></script>
 </body>
 </html>
