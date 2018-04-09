@@ -2,11 +2,21 @@
 
 <!-- Container (Grey Section) -->
 <nav class="pull-sm-right hidden-sm-down" style="margin: 1% 5%;position: fixed;float: right;z-index: 2000; right: 0;">
-    <button type="button" class="btn btn-warning"><a href="#top">HOME</a></button>
-    <button type="button" class="btn btn-warning"><a href="#about">ABOUT</a></button>
-    <button type="button" class="btn btn-warning"><a href="#events">EVENTS</a></button>
-    <button type="button" class="btn btn-warning"><a href="#officers">OFFICERS</a></button>
-    <button type="button" class="btn btn-warning"><a href="#googleMap">MAP</a></button>
+    <button type="button" class="btn btn-warning">
+        <a href="" smooth-scroll target="top" offset="5">HOME</a>
+    </button>
+    <button type="button" class="btn btn-warning">
+        <a href="" smooth-scroll target="about" offset="5">ABOUT</a>
+    </button>
+    <button type="button" class="btn btn-warning">
+        <a href="" smooth-scroll target="events" offset="5">EVENTS</a>
+    </button>
+    <button type="button" class="btn btn-warning">
+        <a href="" smooth-scroll target="officers" offset="5">OFFICERS</a>
+    </button>
+    <button type="button" class="btn btn-warning">
+        <a href="" smooth-scroll target="map" offset="5">MAP</a>
+    </button>
 </nav>
 <div id="stage">
     <div id="stage-caption">
@@ -108,7 +118,9 @@
         </div>
     </div>
 </section>
-
+<div id="map" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{ googleMapsUrl }}">
+    <ng-map center="41.111773, -85.111416" zoom="20" tilt="45" map-type-id="SATELLITE"></ng-map>
+</div>
 
 
 
