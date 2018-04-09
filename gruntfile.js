@@ -25,11 +25,11 @@ module.exports = function(grunt) {
 			},
 			lib: {
 				src: [
-					'node_modules/angular/angular.min.js', 
-					'node_modules/angular-route/angular-route.min.js',
-					'node_modules/angular-animate/angular-animate.min.js',
+					'node_modules/angular/angular.js', 
+					'node_modules/angular-route/angular-route.js',
+					'node_modules/angular-animate/angular-animate.js',
 					'node_modules/angular-sanitize/angular-sanitize.js',
-					'node_modules/ngmap/build/scripts/ng-map.min.js'
+					'node_modules/ngmap/build/scripts/ng-map.js'
 				],
                 dest: 'scripts.js'
 			},
@@ -49,6 +49,10 @@ module.exports = function(grunt) {
 			options: {
 				banner: '<%= banner %>',
 				mangle: false,
+			},
+			lib: {
+				src: 'scripts.js',
+				dest: 'scripts.min.js'
 			},
 			build: {
 				src: '<%= pkg.name %>.js',
@@ -129,7 +133,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s).
-	grunt.registerTask('default', ['concat', 'uglify']);
+	grunt.registerTask('default', ['concat', 'uglify:lib', 'uglify:build']);
 	grunt.registerTask('deploy', ['ftp-deploy']);
 
 	// https://github.com/semantic-release/semantic-release
