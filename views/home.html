@@ -83,10 +83,13 @@
                     <div class="card">
                         <img class="card-img-top" alt="IT Club Event Photos" src="img/computer-lab.jpg"/>
                         <div class="card-block">
-                            <h6 class="card-title">Java Programming 1</h6>
-                            <p class="card-text">Friday 1 July 2016</p>
-                            <p class="card-text">12:00 pm - 3:30 pm CC2312</p>
-                            <a class="btn btn-warning" href="https://orgsync.com/139217/events/1488116/" target="_blank">Learn More</a>
+                            <h6 class="card-title">{{ events[0].title }}</h6>
+                            <p class="card-text">
+                                    {{ events[0].dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }}
+                                    {{ events[0].dates[0].ends_at | date : "'to ' h:mm a" }}
+                                </p>
+                            <p class="card-text">{{ events[0].location | date }}</p>
+                            <a class="btn btn-warning" ng-href="events[0].link" target="_blank">Learn More</a>
                         </div>						
                     </div>
                 </div>
@@ -95,10 +98,13 @@
                     <div class="card">
                         <img class="card-img-top" alt="IT Club Event Photos" src="img/visual-studio-workstation.jpg"/>
                         <div class="card-block">
-                            <h6 class="card-title">Java Programming 2</h6>
-                            <p class="card-text">Friday 8 July 2016</p>
-                            <p class="card-text">12:00 pm - 3:30 pm CC2312</p>
-                            <a class="btn btn-warning" href="https://orgsync.com/139217/events/1488116/" target="_blank">Learn More</a>
+                            <h6 class="card-title">{{ events[1].title }}</h6>
+                            <p class="card-text">
+                                {{ events[1].dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }}
+                                {{ events[1].dates[0].ends_at | date : "'to ' h:mm a" }}
+                            </p>
+                            <p class="card-text">{{ events[1].location | date }}</p>
+                            <a class="btn btn-warning" ng-href="events[1].link" target="_blank">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -107,10 +113,13 @@
                     <div class="card">
                         <img class="card-img-top" alt="IT Club Event Photos" src="img/workstation.jpg"/>
                         <div class="card-block">
-                            <h6 class="card-title">Java Programming 3</h6>
-                            <p class="card-text">Friday 15 July 2016</p>
-                            <p class="card-text">12:00 pm - 3:30 pm CC2312</p>
-                            <a class="btn btn-warning" href="https://orgsync.com/139217/events/1488116/" target="_blank">Learn More</a>
+                            <h6 class="card-title">{{ events[2].title }}</h6>
+                            <p class="card-text">
+                                    {{ events[2].dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }}
+                                    {{ events[2].dates[0].ends_at | date : "'to ' h:mm a" }}
+                                </p>
+                            <p class="card-text">{{ events[2].location | date }}</p>
+                            <a class="btn btn-warning" ng-href="events[2].link" target="_blank">Learn More</a>
                         </div>
                     </div>
                 </div>
