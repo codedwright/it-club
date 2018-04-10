@@ -133,8 +133,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s).
-	grunt.registerTask('default', ['concat', 'uglify:lib', 'uglify:build']);
-	grunt.registerTask('deploy', ['ftp-deploy']);
+	grunt.registerTask('default', ['concat', 'uglify:build']);
+	grunt.registerTask('build', ['compass', 'concat', 'uglify:lib', 'uglify:build']);
 
 	// https://github.com/semantic-release/semantic-release
 	// https://docs.npmjs.com/getting-started/semantic-versioning
