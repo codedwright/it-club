@@ -83,6 +83,28 @@ module.exports = function(grunt) {
 			}
 		},
 
+		karma: {
+			unit: {
+				options: {
+					frameworks: ['jasmine'],
+					singleRun: true,
+					browsers: ['PhantomJS'],
+					files: [
+						'node_modules/angular/angular.min.js', 
+						'node_modules/angular-route/angular-route.min.js',
+						'node_modules/angular-animate/angular-animate.min.js',
+						'node_modules/angular-sanitize/angular-sanitize.min.js',
+						'node_modules/ngmap/build/scripts/ng-map.min.js',
+						'node_modules/angular-mocks/angular-mocks.js', // All dependencies required before loading tests or scripts
+						'js/app.js',
+						'js/app.config.js',
+						'js/controllers/*.js', // no arrow functions or spread syntax
+					]
+				}
+				
+			}
+		},
+
 		bump: {
 			options: {
 				files: ['package.json'],
@@ -131,10 +153,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify-es');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-karma');
 
 	// Default task(s).
 	grunt.registerTask('default', ['concat', 'uglify:build']);
 	grunt.registerTask('build', ['compass', 'concat', 'uglify:lib', 'uglify:build']);
+	grunt.registerTask('test', ['karma']);
 
 	// https://github.com/semantic-release/semantic-release
 	// https://docs.npmjs.com/getting-started/semantic-versioning
