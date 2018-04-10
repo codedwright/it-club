@@ -1,5 +1,5 @@
 /*!
- * It-club v.2.0.0
+ * It-club v.2.0.1
  * Copyright (c) 2018 Foo.
  *
  * Author: Joseph Wright (joseph@codedwright.com).
@@ -9,8 +9,11 @@ var app = angular.module('itclub', ['ngRoute', 'ngAnimate', 'ngSanitize', 'ngMap
 app.controller('AboutController', ['$scope', function($scope) {
 	
 }]);
-app.controller('CalendarController', ['$scope', function($scope) {
-	
+app.controller('CalendarController', ['$scope', '$http', function($scope, $http) {
+	$http.get("https://api.orgsync.com/api/v3/portals/139217/events.json?key=saQO-P_BwlyykPjd0Et9woSjp_IgtCbnK1NhHcCBdA0&per_page=100&upcoming=true").then((results) => {
+        console.log(results.data);
+        $scope.events = results.data.data;
+    })
 }]);
 app.controller('ContactController', ['$scope', function($scope) {
 	
