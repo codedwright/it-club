@@ -1,1 +1,85 @@
 <!-- embed of google calendar? -->
+<section class="feature bg-light">
+    <div class="container">
+        <div class="feature-content">
+            <div class="col-lg-6">
+                <img src="img/workstation.jpg" alt="Workstation" />
+            </div>
+            <div class="col-lg-5 col-lg-offset-1">
+                <p class="hidden-md-up">&nbsp;</p>
+                <h6>Calendar of Events</h6>
+                <h2>EVENTS</h2>
+                <h5>URL to Calendar <a class="btn btn-secondary" href="https://calendar.google.com/calendar/embed?src=d3kec1s9m8ndpke7lojl0d9rh8%40group.calendar.google.com&ctz=America%2FFort_Wayne" target="_blank">Click Here</a></h5>
+                <h5>URL to iCal <a class="btn btn-secondary" href="https://calendar.google.com/calendar/ical/d3kec1s9m8ndpke7lojl0d9rh8%40group.calendar.google.com/public/basic.ics" target="_blank">Click Here</a></h5>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<section class="feature bg-dark text-xs-center">
+    <div class="container">
+        <h1>Upcoming Events</h1>
+        <div class="row">
+            <div class="feature-content">
+                <div class="col-md-4" ng-repeat="event in events | filter : 139217 | limitTo : 3 : 0">
+                    <div class="card">
+                        <img class="card-img-top" alt="IT Club Event Photos" src="{{ event.thumbnail_url }}" />
+                        <div class="card-block">
+                            <h6 class="card-title">{{ event.title }}</h6>
+                            <p class="card-text">
+                                {{ event.dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }} {{ event.dates[0].ends_at | date : "'to ' h:mm a" }}
+                            </p>
+                            <p class="card-text">{{ event.location | date }}</p>
+                            <a class="btn btn-warning" ng-href="{{event.links.web}}" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="feature-content">
+                <div class="col-md-4" ng-repeat="event in events | filter : 139217 | limitTo : 3 : 3">
+                    <div class="card">
+                        <img class="card-img-top" alt="IT Club Event Photos" src="{{ event.thumbnail_url }}" />
+                        <div class="card-block">
+                            <h6 class="card-title">{{ event.title }}</h6>
+                            <p class="card-text">
+                                {{ event.dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }} {{ event.dates[0].ends_at | date : "'to ' h:mm a" }}
+                            </p>
+                            <p class="card-text">{{ event.location | date }}</p>
+                            <a class="btn btn-warning" ng-href="{{event.links.web}}" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="feature-content">
+                <div class="col-md-4" ng-repeat="event in events | filter : 139217 | limitTo : 3 : 6">
+                    <div class="card">
+                        <img class="card-img-top" alt="IT Club Event Photos" src="{{ event.thumbnail_url }}" />
+                        <div class="card-block">
+                            <h6 class="card-title">{{ event.title }}</h6>
+                            <p class="card-text">
+                                {{ event.dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }} {{ event.dates[0].ends_at | date : "'to ' h:mm a" }}
+                            </p>
+                            <p class="card-text">{{ event.location | date }}</p>
+                            <a class="btn btn-warning" ng-href="{{event.links.web}}" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="feature bg-light">
+    <div class="container">
+        <div class="feature-content">
+            <div class="col-lg-12">
+                <div class="embed-responsive embed-responsive-16by9" style="min-height: 400px;">
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=d3kec1s9m8ndpke7lojl0d9rh8%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FFort_Wayne" style="border:solid 1px #777;" class="embed-responsive-item" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
