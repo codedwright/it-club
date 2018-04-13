@@ -1,5 +1,5 @@
 /*!
- * It-club v.2.0.1
+ * It-club v.2.0.4
  * Copyright (c) 2018 Foo.
  *
  * Author: Joseph Wright (joseph@codedwright.com).
@@ -7,13 +7,14 @@
 
 var app = angular.module('itclub', ['ngRoute', 'ngAnimate', 'ngSanitize', 'ngMap']);
 app.controller('AboutController', ['$scope', function($scope) {
-	
+
 }]);
 app.controller('CalendarController', ['$scope', '$http', function($scope, $http) {
-	$http.get("https://api.orgsync.com/api/v3/portals/139217/events.json?key=saQO-P_BwlyykPjd0Et9woSjp_IgtCbnK1NhHcCBdA0&per_page=100&upcoming=true").then((results) => {
-        console.log(results.data);
-        $scope.events = results.data.data;
-    })
+    $http.get("https://api.orgsync.com/api/v3/portals/139217/events.json?key=saQO-P_BwlyykPjd0Et9woSjp_IgtCbnK1NhHcCBdA0&per_page=100&upcoming=true")
+        .then(function(results) {
+            console.log(results.data);
+            $scope.events = results.data.data;
+        })
 }]);
 app.controller('ContactController', ['$scope', function($scope) {
 	
@@ -23,6 +24,9 @@ app.controller('EventsController', ['$scope', function($scope) {
 }]);
 app.controller('HomeController', ['$scope', '$http', 'NgMap', function($scope, $http, NgMap) {
     
+
+    //https://stackoverflow.com/questions/32055944/ngmap-for-markers-in-google-map
+
     // https://ngmap.github.io/     
     $scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyANiFWCJ6jQBnnJVez5wBS7tbERHaWm330";
     NgMap.getMap().then(function(map) {
@@ -30,19 +34,17 @@ app.controller('HomeController', ['$scope', '$http', 'NgMap', function($scope, $
         console.log('markers', map.markers);
         console.log('shapes', map.shapes);
     }); 
-    $http.get("https://api.orgsync.com/api/v3/portals/139217/events.json?key=saQO-P_BwlyykPjd0Et9woSjp_IgtCbnK1NhHcCBdA0&per_page=100&upcoming=true").then((results) => {
-        console.log(results.data);
-        $scope.events = results.data.data;
-    })
+    $http.get("https://api.orgsync.com/api/v3/portals/139217/events.json?key=saQO-P_BwlyykPjd0Et9woSjp_IgtCbnK1NhHcCBdA0&per_page=100&upcoming=true")
+        .then(function(results) {
+            console.log(results.data);
+            $scope.events = results.data.data;
+        });
 }]);
 app.controller('NewsController', ['$scope', function($scope) {
 	
 }]);
-app.controller('PhotosController', ['$scope', 'photos', '$routeParams', function($scope, photos, $routeParams) {
-	photos.success(function(data) {
-		$scope.detail = data[$routeParams.id];
-		$scope.small = window.outerWidth < 700;
-	});
+app.controller('PhotosController', ['$scope', function($scope, $routeParams) {
+
 }]);
 //pull json from orgsync
 app.factory('photos', ['$http', function($http) {
@@ -95,6 +97,7 @@ app.config(['$locationProvider', '$routeProvider',
 			$locationProvider.html5Mode(true);
 		}
 	]);
+
 /*!
  * classie - class helper functions
  * from bonzo https://github.com/ded/bonzo

@@ -1,5 +1,8 @@
 app.controller('HomeController', ['$scope', '$http', 'NgMap', function($scope, $http, NgMap) {
     
+
+    //https://stackoverflow.com/questions/32055944/ngmap-for-markers-in-google-map
+
     // https://ngmap.github.io/     
     $scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyANiFWCJ6jQBnnJVez5wBS7tbERHaWm330";
     NgMap.getMap().then(function(map) {

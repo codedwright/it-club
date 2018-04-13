@@ -38,6 +38,8 @@ module.exports = function(grunt) {
 					'js/app.js',
 					'js/controllers/*.js',
 					'js/services/*.js',
+					'!js/controllers/*.spec.js',
+					'!js/services/*.spec.js',
 					'js/app.config.js',
 					'js/**.js'
 				],
@@ -74,8 +76,9 @@ module.exports = function(grunt) {
 		compass: {
 			dist: {
 				options: {
-					sassDir: 'css',
-					cssDir: 'css',
+					sassDir: 'styles',
+					cssDir: 'styles',
+					specify: 'styles/styles.scss',
 					sourcemap: true,
 					environment: 'development',
 					outputStyle: 'compressed'
@@ -88,6 +91,7 @@ module.exports = function(grunt) {
 				options: {
 					frameworks: ['jasmine'],
 					singleRun: true,
+					autoWatch: true,
 					browsers: ['PhantomJS'],
 					files: [
 						'node_modules/angular/angular.min.js', 
@@ -101,7 +105,6 @@ module.exports = function(grunt) {
 						'js/controllers/*.js', // no arrow functions or spread syntax
 					]
 				}
-				
 			}
 		},
 
