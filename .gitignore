@@ -38,6 +38,8 @@ orgsync_views/
 
 # css
 .sass-cache/
+styles/bootstrap
+*.scss
 
 # js
 legacy/
