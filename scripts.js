@@ -1,5 +1,5 @@
 /*!
- * It-club v.2.0.4
+ * It-club v.2.0.6
  * Copyright (c) 2018 Foo.
  *
  * Author: Joseph Wright (joseph@codedwright.com).

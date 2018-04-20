@@ -35,13 +35,14 @@ module.exports = function(grunt) {
 			},
             dist: {
                 src: [
-					'js/app.js',
-					'js/controllers/*.js',
-					'js/services/*.js',
-					'!js/controllers/*.spec.js',
-					'!js/services/*.spec.js',
-					'js/app.config.js',
-					'js/**.js'
+					'app/app.js',
+					'app/controllers/**/*.js',
+					'app/services/**/*.js',
+					'app/directives/**/*.js',
+					'!app/controllers/**/*.spec.js',
+					'!app/services/**/*.spec.js',
+					'app/app.config.js',
+					'app/**.js'
 				],
                 dest: '<%= pkg.name %>.js'
             }
@@ -63,7 +64,7 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-			files: ['gruntfile.js', 'js/portfolio.js'],
+			files: ['gruntfile.js', 'portfolio.js'],
 			options: {
 				globals: {
 					jQuery: true,
@@ -100,9 +101,11 @@ module.exports = function(grunt) {
 						'node_modules/angular-sanitize/angular-sanitize.min.js',
 						'node_modules/ngmap/build/scripts/ng-map.min.js',
 						'node_modules/angular-mocks/angular-mocks.js', // All dependencies required before loading tests or scripts
-						'js/app.js',
-						'js/app.config.js',
-						'js/controllers/*.js', // no arrow functions or spread syntax
+						'app/app.js',
+						'app/app.config.js',
+						'app/controllers/**/*.js', // no arrow functions or spread syntax
+						'app/directives/**/*.js',
+						'app/services/**/*.js',
 					]
 				}
 			}
@@ -138,7 +141,7 @@ module.exports = function(grunt) {
 	            
 			},
 			js: {
-				files: ['js/*.js', 'js/**/*.js'],
+				files: ['app/*.js', 'app/**/*.js'],
 				tasks: ['concat', 'uglify'],
             },
             html: {

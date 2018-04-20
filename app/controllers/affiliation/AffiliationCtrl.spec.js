@@ -1,4 +1,4 @@
-describe('AboutController', function () {
+describe('AffiliationCtrl', function () {
     beforeEach(module('itclub'));
 
     var $controller;
@@ -8,10 +8,10 @@ describe('AboutController', function () {
         $controller = _$controller_;
     }));
 
-    describe('$scope.grade', function () {
+    describe('$scope', function () {
         it('sets the strength to "strong" if the password length is >8 chars', function () {
             var $scope = {};
-            var controller = $controller('AboutController', {
+            var controller = $controller('AffiliationCtrl', {
                 $scope: $scope
             });
             // expect scope to be 3
