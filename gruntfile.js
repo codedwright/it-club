@@ -163,6 +163,7 @@ module.exports = function(grunt) {
 
 	// Default task(s).
 	grunt.registerTask('default', ['concat', 'uglify:build']);
+	grunt.registerTask('scss', ['compass']);
 	grunt.registerTask('build', ['compass', 'concat', 'uglify:lib', 'uglify:build']);
 	grunt.registerTask('test', ['karma']);
 
