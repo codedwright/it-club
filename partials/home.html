@@ -22,115 +22,66 @@ Home
 -->
 
 <div class="hero">
-    <div class="caption">
+    <!-- <div class="caption">
         <h1 class="display-1">IT Club</h1>
         <p>Greetings! Lets Connect!</p>
         <a href="https://orgsync.com/139217" class="btn btn-lg btn-secondary" target="_blank">Join Here</a>
+    </div> -->
+    <div class="scroll-downs">
+        <div class="mousey">
+            <div class="scroller"></div>
+        </div>
     </div>
 </div>
-<section class="feature bg-light" id="about">
+<section class="bg-light">
     <div class="container">
         <div class="row">
-            <div class="feature-content">
-                <div class="col-lg-6">
-                    <img src="img/workstation.jpg" alt="Workstation" />
-                </div>
-                <div class="col-lg-5 col-lg-offset-1">
-                    <p class="hidden-md-up">&nbsp;</p>
-                    <h6>Information Technology Club</h6>
-                    <h2>ABOUT</h2>
-                    <p>The School of Computing &amp; Informatics of Ivy Tech Community College Northeast, would like to introduce you to our brand new club!
-                    <p>The IT Club engages members through talks and presentations by local practitioners, visits and discussions from prominent speakers, technical and career workshops, field trips to local industries and regional tours, informative and fundraising computing fairs, and social activities including WAN/LAN parties and movies. Our club will be participating in official competitions and challenges in various computing and informatics areas.</p>
-                    <p>We meet on the Coliseum Campus in Room 2312. Events and times listed below.</p>
-                </div>
+            <div class="col-md-6  justify-content-center py-2">
+                <img class="img-fluid" src="img/workstation.jpg" alt="Workstation" />
+            </div>
+            <div class="col-md-6 py-2">
+                <p class="d-none d-md-flex">&nbsp;</p>
+                <h6>Information Technology Club</h6>
+                <h2>ABOUT</h2>
+                <p>The School of Computing &amp; Informatics of Ivy Tech Community College Northeast, would like to introduce you to our brand new club!
+                <p>The IT Club engages members through talks and presentations by local practitioners, visits and discussions from prominent speakers, technical and career workshops, field trips to local industries and regional tours, informative and fundraising computing fairs, and social activities including WAN/LAN parties and movies. Our club will be participating in official competitions and challenges in various computing and informatics areas.</p>
+                <p>We meet on the Coliseum Campus in Room 2312. Events and times listed below.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="feature bg-dark" id="events">
+<section class="bg-dark text-light">
     <div class="container">
         <div class="row">
-            <div class="feature-content">
-                <div class="col-lg-5 text-md-right">
-                    <h6>Community &amp; Student Engagement</h6>
-                    <h2>EVENTS</h2>
-                    <p>The IT Club holds student-led scientific, educational and casual events dedicated to advancing the arts, sciences, and applications of information technology, in a fun, upbeat, casual way. Students and community members are encouraged to attend all events and bring friends to have a fun and infomative time learning and growing in various areas of computing and informatics.</p>
-                    <p>Remember to RSVP! Bring a friend, let&#39;s have some fun!</p>
-                    <a class="btn btn-warning-outline btn-sm" data-toggle="collapse" href="#contact">Call or text for more details!</a>
-                    <div class="collapse" id="contact">
-                        <br />
-                        <h6 class="display-6">Click here to call <a class="btn btn-sm btn-warning-outline" href="tel:260-755-9083">(260) 755-9083</a></h6>
-                    </div>
-                    <p>&nbsp;</p>
-                </div>
-                <div class="col-lg-6 col-lg-offset-1">
-                    <ul class="list-group">
-                        <li class="list-group-item">July: <button class="btn btn-warning btn-sm pull-xs-right">Java Programming</span></li>
-                        <li class="list-group-item">August: <button class="btn btn-warning btn-sm pull-xs-right">Competition Preparation</span></li>
-                        <li class="list-group-item">September: <button class="btn btn-warning btn-sm pull-xs-right">Competition Season</span></li>
-                        <li class="list-group-item">October: <span class="btn btn-warning btn-sm pull-xs-right">Halloween</span></li>
-                        <li class="list-group-item">November: <span class="btn btn-warning btn-sm pull-xs-right">Thanksgiving</span></li>
-                        <li class="list-group-item">December: <span class="btn btn-warning btn-sm pull-xs-right">Finals</span></li>
-                    </ul>
-                </div>
+            <div class="col-md-6 text-md-right justify-content-center py-2">
+                <h6>Community &amp; Student Engagement</h6>
+                <h2>EVENTS</h2>
+                <p>The IT Club holds student-led scientific, educational and casual events dedicated to advancing the arts, sciences, and applications of information technology, in a fun, upbeat, casual way. Students and community members are encouraged to attend all events and bring friends to have a fun and infomative time learning and growing in various areas of computing and informatics.</p>
+                <p>Remember to RSVP! Bring a friend, let&#39;s have some fun!</p>
+                <h6 class="small">Click here to call <a class="btn btn-sm btn-outline-warning" href="tel:260-755-9083">(260) 755-9083</a></h6>
+                <p>&nbsp;</p>
             </div>
-        </div>
-    </div>
-</section>		
-<section class="feature bg-dark text-xs-center">
-    <div class="container">	
-        <div class="row">
-            <div class="feature-content">
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" alt="IT Club Event Photos" src="img/computer-lab.jpg"/>
-                        <div class="card-block">
-                            <h6 class="card-title">{{ events[0].title }}</h6>
-                            <p class="card-text">
-                                    {{ events[0].dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }}
-                                    {{ events[0].dates[0].ends_at | date : "'to ' h:mm a" }}
-                                </p>
-                            <p class="card-text">{{ events[0].location | date }}</p>
-                            <a class="btn btn-warning" ng-href="events[0].links.web" target="_blank">Learn More</a>
-                        </div>						
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" alt="IT Club Event Photos" src="img/visual-studio-workstation.jpg"/>
-                        <div class="card-block">
-                            <h6 class="card-title">{{ events[1].title }}</h6>
-                            <p class="card-text">
-                                {{ events[1].dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }}
-                                {{ events[1].dates[0].ends_at | date : "'to ' h:mm a" }}
-                            </p>
-                            <p class="card-text">{{ events[1].location | date }}</p>
-                            <a class="btn btn-warning" ng-href="events[1].links.web" target="_blank">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" alt="IT Club Event Photos" src="img/workstation.jpg"/>
-                        <div class="card-block">
-                            <h6 class="card-title">{{ events[2].title }}</h6>
-                            <p class="card-text">
-                                    {{ events[2].dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }}
-                                    {{ events[2].dates[0].ends_at | date : "'to ' h:mm a" }}
-                                </p>
-                            <p class="card-text">{{ events[2].location | date }}</p>
-                            <a class="btn btn-warning" ng-href="events[2].links.web" target="_blank">Learn More</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-6 py-2">
+                <ul class="list-group" ng-repeat="item in home.events | filter : 139217 | limitTo : 4">
+                    <li class="list-group-item align-items-center m-1">
+                        <span class="h4 float-left text-dark mr-2 mb-0">
+                            <i class="far fa-check-circle"></i>
+                        </span>
+                        <p class="h5 d-flex justify-content-between align-items-center text-dark m-0">
+                            {{ item.dates[0].starts_at | date : "MMMM d" }}
+                            <a class="h5 d-flex align-items-center badge badge-danger badge-pill m-0 " ng-href="./events#upcoming">
+                                {{ item.title }}
+                            </a>
+                        </p> 
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
-<div id="map" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{ googleMapsUrl }}">
+<!-- Showcase -->
+<div class="map" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{ home.googleMapsUrl }}">
     <ng-map center="41.111773, -85.111416" zoom="20" tilt="45" map-type-id="SATELLITE"></ng-map>
 </div>
 

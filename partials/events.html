@@ -6,3 +6,102 @@ Events
     Code Camp Times
     Calendar 
 -->
+<section class="bg-light w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1>
+                    Events
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-dark text-light w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 p-2">
+                <div class="map" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{ events.googleMapsUrl }}">
+                    <ng-map center="41.111773, -85.111416" zoom="16" tilt="0" map-type-id="ROADMAP"></ng-map>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <h2>
+                    Contact Information:
+                </h2>
+                <p>
+                    <span class="align-middle">Email:</span> <a href="mailto:info@itclubivy.com" class="btn btn-sm btn-secondary">info@itclubivy.com</a>
+                </p>
+                <address>
+                    Address:<br>
+                    3800 N Anthony Blvd<br>
+                    Fort Wayne, IN 46805<br>
+                    USA
+                </address>
+                <p>
+                    Club Room: Coliseum Campus Room 2312
+                </p>
+                <p>
+                    Primary Contacts: <br>
+                    <a ng-href="./members#kris" class="btn btn-sm btn-secondary">Kris Roberts</a>, 
+                    <a ng-href="./members#lucy" class="btn btn-sm btn-secondary">Lucy LaHurreau</a>, 
+                    <a ng-href="./members#joey" class="btn btn-sm btn-secondary">Joseph Wright</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-light w-100">
+    <div class="container">
+        <div id="upcoming" class="row">
+            <div class="col">
+                <h2>
+                    Upcoming Events:
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 my-2" ng-repeat="item in events.list | filter : 139217 | limitTo : 3 : 0">
+                <div class="card">
+                    <img class="card-img-top" alt="IT Club Event Photos" src="{{ item.thumbnail_url.replace('90', '215') }}" />
+                    <div class="card-body">
+                        <h2 class="card-title">{{ item.title }}</h6>
+                        <p class="card-text">
+                            {{ item.dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }} {{ item.dates[0].ends_at | date : "'to ' h:mm a" }}
+                        </p>
+                        <p class="card-text">{{ item.location }}</p>
+                        <a class="btn btn-primary" ng-href="{{item.links.web}}" target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 my-2" ng-repeat="item in events.list | filter : 139217 | limitTo : 3 : 2">
+                <div class="card">
+                    <img class="card-img-top" alt="IT Club Event Photos" src="{{ item.thumbnail_url.replace('90', '215') }}" />
+                    <div class="card-body">
+                        <h6 class="card-title">{{ item.title }}</h6>
+                        <p class="card-text">
+                            {{ item.dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }} {{ item.dates[0].ends_at | date : "'to ' h:mm a" }}
+                        </p>
+                        <p class="card-text">{{ item.location }}</p>
+                        <a class="btn btn-primary" ng-href="{{item.links.web}}" target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-dark text-light w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col p-md-5">
+                <div class="embed-responsive embed-responsive-16by9" style="min-height: 400px;">
+                    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=d3kec1s9m8ndpke7lojl0d9rh8%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FNew_York" style="border:solid 1px #777;" class="embed-responsive-item" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <a class="btn btn-secondary" href="https://calendar.google.com/calendar/embed?src=d3kec1s9m8ndpke7lojl0d9rh8%40group.calendar.google.com&ctz=America%2FFort_Wayne" target="_blank">URL to Calendar</a>
+                <a class="btn btn-secondary" href="https://calendar.google.com/calendar/ical/d3kec1s9m8ndpke7lojl0d9rh8%40group.calendar.google.com/public/basic.ics" target="_blank">URL to iCal</a>            
+            </div>
+        </div>
+    </div>
+</section>

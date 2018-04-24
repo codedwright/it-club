@@ -47,96 +47,228 @@ Members (Custom Post Type)
         Email
  -->
 
-
-<section class="feature bg-light text-xs-center" id="officers">
+ <section class="bg-light w-100">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <h1 class="display-4">Executive Officers</h1><br />
+            <div class="col text-center">
+                <h1>
+                    Members
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-dark text-light w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 justify-content-center">
+                <h2 class="py-2">How To Join:</h2>
+                <h3 class="text-center">
+                    We are in search of anyone wanting to demystify programming and new technology!
+                </h3>
+                <p class="lead text-center">
+                    We aim to show that anyone can learn the basics!
+                </p>
+                <p>
+                    Click through to connect with our advisors, managers, and officers via <i class="fas fa-envelope mx-2"></i> email, <i class="fas fa-phone mx-2"></i> phone, <i class="fab fa-linkedin mx-2"></i> LinkedIn, or you can click to view their <i class="fas fa-book mx-2"></i> portfolio, or browse their <i class="fab fa-github mx-2"></i> GitHub profile. 
+                </p>
+                <small class="small text-center">
+                    Open, Zero-Obligation, Public Membership for ALL ages regardless of student status or school affiliation!
+                </small>
+                <a href="https://orgsync.com/139217" class="btn btn-secondary btn-sm m-3">Ivy Tech Students Click Here</a>
+            </div>
+            <div class="col-md-6 m-auto">
+                <div class="map" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{ members.googleMapsUrl }}">
+                    <ng-map center="41.111773, -85.111416" zoom="16" tilt="0" map-type-id="ROADMAP"></ng-map>
+                </div>
+                <form class="mt-4">
+                    <h3 class="text-light">Signup:</h3>
+                    <div class="form-row">
+                        <div class="form-group col my-2">
+                            <input type="text" class="form-control" id="first" placeholder="First">
+                        </div>
+                        <div class="form-group col my-2">
+                            <input type="text" class="form-control" id="last" placeholder="Last">
+                        </div>
+                        <div class="form-group col my-2">
+                            <input type="text" class="form-control" id="phone" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col my-2">
+                            <input type="email" class="form-control" id="email" placeholder="...@ivytech.edu">
+                        </div>
+                        <div class="form-group col my-2">
+                            <input type="text" class="form-control" id="last" placeholder="Other Email">
+                        </div>
+                        <div class="form-group col my-2">
+                            <button type="submit" class="btn btn-success">Confirm identity</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-light w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Faculty Advisors:</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div id="kris" class="col-md-6">
+                <div class="media">
+                    <img class="mr-3 w-25 rounded-circle" src="/img/kris.png" alt="">
+                    <div class="media-body">
+                        <h3 class="mt-0">Kris Roberts</h3>
+                        <h4>Department Chair <br>- <small>School of Information Technology</small></h4>
+                        <a href="mailto:kroberts100@ivytech.edu" class="btn btn-primary m-2">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:2604804282" class="btn btn-primary m-2">
+                            <i class="fas fa-phone"></i>
+                        </a>    
+                        <a href="https://www.linkedin.com/in/kristopher-roberts-46809b116/" class="btn btn-primary m-2" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>   
+                    </div>
+                </div>
+            </div>
+            <div id="lucy" class="col-md-6">
+                <div class="media">
+                    <img class="mr-3 w-25 rounded-circle" src="/img/lucy.jpg" alt="">
+                    <div class="media-body">
+                        <h3 class="mt-0">Lucy LaHurreau</h3>
+                        <h4>Assistant Professor <br>- <small>Health Information Technology</small></h4>
+                        <a href="mailto:llahurreau@ivytech.edu" class="btn btn-primary m-2">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:2604829171,,,2548" class="btn btn-primary m-2">
+                            <i class="fas fa-phone"></i>
+                        </a>    
+                        <a href="https://www.linkedin.com/in/kristopher-roberts-46809b116/" class="btn btn-primary m-2" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-dark text-light w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Managers:</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 m-auto">
+                <div id="joey" class="media">
+                    <img class="mr-3 w-25 rounded-circle" src="/img/joey.jpg" alt="">
+                    <div class="media-body">
+                        <h3 class="mt-0">Joseph Wright</h3>
+                        <h4>Web Developer</h4>
+                        <a href="mailto:joseph@codedwright.com" class="btn btn-secondary m-2">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:2607559083" class="btn btn-secondary m-2">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://codedwright.com" class="btn btn-secondary m-2" target="_blank">
+                            <i class="fas fa-book"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kristopher-roberts-46809b116/" class="btn btn-secondary m-2" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/codedwright" class="btn btn-secondary m-2" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-light w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Officers:</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-block">
-                        <a data-toggle="collapse" href="#kris">
-                            <img class="card-img-top" alt="IT Club Officer Photos" src="img/kris.png"/>
-                            <h2 class="card-title display-5"><strong>Kris Roberts</strong></h6>
+                <div class="media">
+                    <img class="mr-3 w-25 rounded-circle" src="http://via.placeholder.com/150x150" alt="">
+                    <div class="media-body">
+                        <h3 class="mt-0">Conrad Alston</h3>
+                        <h4>President</h4>
+                        <a href="mailto:calston7@ivytech.edu" class="btn btn-primary m-2">
+                            <i class="fas fa-envelope"></i>
                         </a>
-                        <div class="collapse" id="kris">
-                            <p class="card-text">kroberts100@ivytech.edu</p>
-                            <p class="card-text">School Of Computing &amp; Informatics</p>
-                            <p class="card-text">Department Chair / Club Advisor</p>
-                            <a class="btn btn-warning-outline btn-sm" href="https://www.linkedin.com/in/kristopher-roberts-46809b116" target="_blank">LinkedIn</a>
-                        </div>
+                        <a href="#" class="btn btn-primary disabled m-2">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="#" class="btn btn-primary disabled m-2" target="_blank">
+                            <i class="fas fa-book"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/conrad-alston-38247366/" class="btn btn-primary m-2" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-primary disabled m-2" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>  
                     </div>
                 </div>
             </div>
-
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-block">
-                        <a data-toggle="collapse" href="#lucy">
-                            <img class="card-img-top" alt="IT Club Officer Photos" src="img/lucy.jpg"/>
-                            <h2 class="card-title display-5"><strong>Lucy La&#39; Hurreau</strong></h6>
+                <div class="media">
+                    <img class="mr-3 w-25 rounded-circle" src="http://via.placeholder.com/150x150" alt="">
+                    <div class="media-body">
+                        <h3 class="mt-0">Keith Davis</h3>
+                        <h4>Vice President</h4>
+                        <a href="mailto:kdavis573@ivytech.edu" class="btn btn-primary m-2">
+                            <i class="fas fa-envelope"></i>
                         </a>
-                        <div class="collapse" id="lucy">
-                            <p class="card-text">llahurreau@ivytech.edu</p>
-                            <p class="card-text">Health Information Technology</p>
-                            <p class="card-text">Assistant Professor / Female Club Advisor</p>
-                            <a class="btn btn-warning-outline btn-sm" href="https://www.linkedin.com/in/lucy-la-hurreau-048936a" target="_blank">LinkedIn</a>
-                        </div>
+                        <a href="#" class="btn btn-primary disabled m-2">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="#" class="btn btn-primary disabled m-2" target="_blank">
+                            <i class="fas fa-book"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/keith-davis-39b732162/" class="btn btn-primary m-2" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-primary disabled m-2" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>  
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-block">
-                        <a data-toggle="collapse" href="#joey">
-                            <img class="card-img-top" alt="IT Club Officer Photos" src="img/joey.jpg"/>
-                            <h2 class="card-title display-5"><strong>Joseph Wright</strong></h6>
+            <div class="col-md-6">
+                <div class="media">
+                    <img class="mr-3 w-25 rounded-circle" src="http://via.placeholder.com/150x150" alt="">
+                    <div class="media-body">
+                        <h3 class="mt-0">Jacob Storer</h3>
+                        <h4>Treasurer</h4>
+                        <a href="mailto:jstorer3@ivytech.edu" class="btn btn-primary m-2">
+                            <i class="fas fa-envelope"></i>
                         </a>
-                        <div class="collapse" id="joey">
-                            <p class="card-text">jwright387@ivytech.edu</p>
-                            <p class="card-text">Software Development Alumni</p>
-                            <p class="card-text">President</p>
-                            <a class="btn btn-warning-outline btn-sm" href="https://www.linkedin.com/in/codedwright" target="_blank">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-block">
-                        <a data-toggle="collapse" href="#erik">
-                            <img class="card-img-top" alt="IT Club Officer Photos" src="img/erik.jpg"/>
-                            <h2 class="card-title display-5"><strong>Erik Donovan</strong></h6>
+                        <a href="#" class="btn btn-primary disabled m-2">
+                            <i class="fas fa-phone"></i>
                         </a>
-                        <div class="collapse" id="erik">
-                            <p class="card-text">edonovan5@ivytech.edu</p>
-                            <p class="card-text">Software Development Major</p>
-                            <p class="card-text">Vice President</p>
-                            <a class="btn btn-warning-outline btn-sm" href="https://www.linkedin.com/in/erik-donovan-183b437a" target="_blank">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-block">
-                        <a data-toggle="collapse" href="#kelsey">
-                            <img class="card-img-top" alt="IT Club Officer Photos" src="img/kelsey.jpg"/>
-                            <h2 class="card-title display-5"><strong>Kelsey Woods</strong></h6>
+                        <a href="#" class="btn btn-primary disabled m-2" target="_blank">
+                            <i class="fas fa-book"></i>
                         </a>
-                        <div class="collapse" id="kelsey">
-                            <p class="card-text">kwoods74@ivytech.edu</p>
-                            <p class="card-text">Cyber Security Major</p>
-                            <p class="card-text">Treasurer</p>
-                            <a class="btn btn-warning-outline btn-sm" href="https://www.linkedin.com/in/kelsey-woods-65aa4583" target="_blank">LinkedIn</a>
-                        </div>
+                        <a href="https://www.linkedin.com/in/technologic00011000/" class="btn btn-primary m-2" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-primary disabled m-2" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>  
                     </div>
                 </div>
             </div>

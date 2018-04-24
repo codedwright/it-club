@@ -3,3 +3,30 @@ Gallery
     Photos
     Video 
 -->
+<section class="bg-light w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1>
+                    Gallery
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-dark text-light w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 m-2" ng-repeat="item in gallery.photos">
+                <img class="img-fluid" alt="IT Club Photo" ng-src="item">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 m-2" ng-repeat="item in gallery.videos">
+                <div class="embed-responsive embed-responsive-16by9 pb-1">
+                    <iframe class="embed-responsive-item" frameborder="0" allowfullscreen="" ng-src="item"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

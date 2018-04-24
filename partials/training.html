@@ -6,86 +6,48 @@ Training Programs
     HackerRank
  -->
 
-<section class="feature bg-light">
+ <section class="bg-light w-100">
     <div class="container">
-        <div class="feature-content">
-            <div class="col-lg-6">
-                <img src="img/workstation.jpg" alt="Workstation" />
-            </div>
-            <div class="col-lg-5 col-lg-offset-1">
-                <p class="hidden-md-up">&nbsp;</p>
-                <h6>Calendar of Events</h6>
-                <h2>EVENTS</h2>
-                <h5>URL to Calendar <a class="btn btn-secondary" href="https://calendar.google.com/calendar/embed?src=d3kec1s9m8ndpke7lojl0d9rh8%40group.calendar.google.com&ctz=America%2FFort_Wayne" target="_blank">Click Here</a></h5>
-                <h5>URL to iCal <a class="btn btn-secondary" href="https://calendar.google.com/calendar/ical/d3kec1s9m8ndpke7lojl0d9rh8%40group.calendar.google.com/public/basic.ics" target="_blank">Click Here</a></h5>
-            </div>
-        </div>
-    </div>
-    
-</section>
-<section class="feature bg-dark text-xs-center">
-    <div class="container">
-        <h1>Upcoming Events</h1>
         <div class="row">
-            <div class="feature-content">
-                <div class="col-md-4" ng-repeat="event in events | filter : 139217 | limitTo : 3 : 0">
-                    <div class="card">
-                        <img class="card-img-top" alt="IT Club Event Photos" src="{{ event.thumbnail_url }}" />
-                        <div class="card-block">
-                            <h6 class="card-title">{{ event.title }}</h6>
-                            <p class="card-text">
-                                {{ event.dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }} {{ event.dates[0].ends_at | date : "'to ' h:mm a" }}
-                            </p>
-                            <p class="card-text">{{ event.location | date }}</p>
-                            <a class="btn btn-warning" ng-href="{{event.links.web}}" target="_blank">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="feature-content">
-                <div class="col-md-4" ng-repeat="event in events | filter : 139217 | limitTo : 3 : 3">
-                    <div class="card">
-                        <img class="card-img-top" alt="IT Club Event Photos" src="{{ event.thumbnail_url }}" />
-                        <div class="card-block">
-                            <h6 class="card-title">{{ event.title }}</h6>
-                            <p class="card-text">
-                                {{ event.dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }} {{ event.dates[0].ends_at | date : "'to ' h:mm a" }}
-                            </p>
-                            <p class="card-text">{{ event.location | date }}</p>
-                            <a class="btn btn-warning" ng-href="{{event.links.web}}" target="_blank">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="feature-content">
-                <div class="col-md-4" ng-repeat="event in events | filter : 139217 | limitTo : 3 : 6">
-                    <div class="card">
-                        <img class="card-img-top" alt="IT Club Event Photos" src="{{ event.thumbnail_url }}" />
-                        <div class="card-block">
-                            <h6 class="card-title">{{ event.title }}</h6>
-                            <p class="card-text">
-                                {{ event.dates[0].starts_at | date : "MMMM d, y ' From ' h:mm a " }} {{ event.dates[0].ends_at | date : "'to ' h:mm a" }}
-                            </p>
-                            <p class="card-text">{{ event.location | date }}</p>
-                            <a class="btn btn-warning" ng-href="{{event.links.web}}" target="_blank">Learn More</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="col text-center">
+                <h1>
+                    Training
+                </h1>
             </div>
         </div>
     </div>
 </section>
-<section class="feature bg-light">
+<section class="bg-dark text-light w-100">
     <div class="container">
-        <div class="feature-content">
-            <div class="col-lg-12">
-                <div class="embed-responsive embed-responsive-16by9" style="min-height: 400px;">
-                    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=d3kec1s9m8ndpke7lojl0d9rh8%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FNew_York" style="border:solid 1px #777;" class="embed-responsive-item" frameborder="0" scrolling="no"></iframe>
-                </div>
+        <div class="row">
+            <div class="col-md-8 pr-5">
+                <h2>
+                    What Members Can Expect:
+                </h2>
+                <p>
+                    As a department organization, we are committed to to demystifing code and new technology to broaden participation in the field of computer science! 
+                </p>
+                <p>
+                    We partner with FreeCodeCamp, a non-profit organization that consists of an interactive learning web platform, an online community forum, chat rooms, and Medium publications, intending to make learning web development accessible to anyone.
+                </p>
+                <p>
+                    Through our events, workshops, technology and partnerships, we facilitate students' growth and enrich their education. <span class="d-none d-md-flex">Students can expect to learn the basics of these technologies:</span>
+                </p>
+            </div>
+            <div class="d-none d-lg-flex flex-column col-lg-2 justify-content-center align-items-center">
+                <i class="display-3 fab fa-html5"></i>
+                <i class="display-3 fab fa-css3-alt"></i>
+                <i class="display-3 fab fa-js"></i>
+            </div>
+            <div class="d-none d-md-flex col-md-4 col-lg-2 text-dark text-right justify-content-center align-items-center">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">HTML5</li>
+                    <li class="list-group-item">CSS3</li>
+                    <li class="list-group-item">Bootstrap 4</li>
+                    <li class="list-group-item">JavaScript</li>
+                    <li class="list-group-item">jQuery</li>
+                    <li class="list-group-item">...and more</li>
+                </ul>
             </div>
         </div>
     </div>
