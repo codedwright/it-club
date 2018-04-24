@@ -10,12 +10,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" type="img/ico" href="favicon.ico">
 	<!--[[file:orgsync_defaults]]-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" />
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" />  -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
 	<link href="styles/styles.css" rel="stylesheet" type="text/css" />
 	<link href="styles/menu.css" rel="stylesheet" type="text/css" />
-	<link href="styles/icons.css" rel="stylesheet" type="text/css" /> 
+	<link href="styles/icons.css" rel="stylesheet" type="text/css" />
 	<base href="/v2/">
 	
 	<script src="./scripts.min.js"></script>
@@ -34,7 +35,7 @@
 
 <body ng-app="itclub">
 	<div id="top"></div>
-	<header class="navbar navbar-fixed-top">
+	<header>
 		<nav id="bt-menu" class="bt-menu">
 			<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
 			<ul>
@@ -44,8 +45,8 @@
 				<li><a ng-href="./affiliation">Affiliation</a></li>
 				<li><a ng-href="./training">Training</a></li>
 				<li><a ng-href="./news">News</a></li>
-				<li><a ng-href="./gallery">Contact</a></li>
-				<li><a ng-href="./posts">Showcase (<em>Comming Soon</em>)</a></li>
+				<li><a ng-href="./gallery">Gallery</a></li>
+				<li><a ng-href="./posts"><del>Showcase</del></del></a></li>
 			</ul>
 			<ul>
 				<li><a href="http://www.twitter.com/" class="bt-icon icon-twitter">Twitter</a></li>
@@ -68,10 +69,37 @@
 
 
 	<!-- Footer -->
-	<footer class="text-xs-center hidden-sm-down">
-		<!-- <a class="btn btn-secondary-outline btn-lg" href="#top">&#8682;</a> -->
-		insert email signup here
-	</footer>
+	<section class="bg-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6 col-lg-4 mx-auto">
+					<form class="form-inline justify-content-between">
+						<div class="form-group my-2">
+							<input type="email" class="form-control" id="email" placeholder="Email">
+						</div>
+						<div class="form-group my-2">
+							<button type="submit" class="btn btn-success">Signup</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	
 	<script src="./it-club.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117968587-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-117968587-2');
+	</script>
+
 </body>
 </html>
